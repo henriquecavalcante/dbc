@@ -1,0 +1,101 @@
+<div class="container">
+  <h2 class="mt-4 text-center">Bem-vindo ao desafio prático DBC</h2>
+  <div class="card mt-4 mb-4">
+    <h4 class="font-weight-bold text-center">Requisitos</h4>
+    <hr />
+    <ol>
+      <li class="mt-2">
+        <span class="font-weight-bold">Uma caixa de seleção deve ser disponibilizada, onde:</span>
+        <ol type="a">
+          <li>
+            Opções a serem apresentadas (nessa ordem):
+            <ol type="i">
+              <li>Rio Grande do Sul</li>
+              <li>Santa Catarina</li>
+              <li>Paraná</li>
+            </ol>
+          </li>
+          <li>
+            Opção default:
+            <ol type="i">
+              <li>Santa Catarina</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li class="mt-2">
+        <span class="font-weight-bold">Tendo um estado selecionado na caixa de seleção anterior, a bandeira do mesmo deve ser renderizada.</span>
+      </li>
+      <li class="mt-2">
+        <span class="font-weight-bold">A aplicação deverá contemplar os seguintes dados:</span>
+        <ol type="a">
+          <li>
+            Entidades
+            <ol type="i">
+              <li>ESTADO</li>
+              <li>CIDADE</li>
+            </ol>
+          </li>
+          <li>
+            Carga Inicial:
+            <ol type="i">
+              <li>ESTADO: As opções listadas no item 1.a</li>
+              <li>CIDADE: Quaisquer uma ou mais cidades dos estados correspondentes</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li class="mt-2">
+        <span class="font-weight-bold">A aplicação deverá permitir as ações seguintes, com garantias de manter a base de dados com estas regras:</span>
+        <ol type="a">
+          <li>
+            Inserção:
+            <ol type="i">
+              <li>Não permitir nomes repetidos para cidades dentro de um mesmo estado;</li>
+            </ol>
+          </li>
+          <li>
+            Exclusão:
+            <ol type="i">
+              <li>Não permitir que cidades do estado Rio Grande do Sul sejam excluídas;</li>
+            </ol>
+          </li>
+          <li>
+            Listagem:
+            <ol type="i">
+              <li>A lista deve conter os dados das cidades e suas relações;</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li class="mt-2">
+        <span class="font-weight-bold">Deve ser possível armazenar a população de cada cidade (dado obrigatório), e, com isso:</span>
+        <ol type="a">
+          <li>
+            Deve ser possível realizar a listagem dos estados, onde:
+            <ol type="i">
+              <li>Se exiba a população de cada estado, de acordo com as cidades relacionadas ao mesmo;</li>
+            </ol>
+          </li>
+          <li>
+            Consulta de custo populacional:
+            <ol type="i">
+              <li>Cada cidadão custa ao estado US$ 123.45 (valor em dólar);</li>
+              <li>Há uma correção de cálculo adicional onde a população acima de 50000 recebe um ajuste de -12.3% no valor. Ou seja, os cidadões de número 50001 ou superior custam menos ao estado do que os cidadões de número 50000 ou inferior.</li>
+              <li>As variáveis de custo populacional (valor por pessoa [123.45], valor de corte para desconto [50000] e desconto [12.3]) são configurações, mas não precisam ser manipuladas via aplicação;</li>
+              <li>Deve ser possível ao usuário consultar o custo populacional de cada estado (em reais), considerando a cotação do dia do dólar (realizar consulta a algum webservice público com essa finalidade);</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li class="mt-2">
+        <span class="font-weight-bold">A aplicação deverá ser capaz de, num processo em lote, inserir N cidades:</span>
+        <ol type="a">
+          <li>
+            Deve ser possível selecionar estados distintos para cada cidade no processamento em lote;
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+</div>

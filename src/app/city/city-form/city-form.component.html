@@ -1,0 +1,50 @@
+<div class="d-flex mt-4" style="justify-content: space-between">
+  <h4>Cadastro de Cidades</h4>
+</div>
+<hr />
+<div class="card mt-4 mb-4">
+  <div *ngFor="let city of cities.controls; let i = index;">
+    <ng-container [formGroup]="city">
+      <mat-form-field class="city-field">
+        <mat-label>Cidade*</mat-label>
+        <input matInput type="text" formControlName="name">
+        <mat-error *ngIf="city.controls.name.hasError('required')">
+          *Campo obrigatório
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="city-field">
+        <mat-label>Estado*</mat-label>
+        <mat-select formControlName="state">
+          <mat-option *ngFor="let state of states" [value]="state.abbreviation">
+            {{ state.name }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="city.controls.state.hasError('required')">
+          *Campo obrigatório
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="city-field">
+        <mat-label>População*</mat-label>
+        <input matInput type="number" formControlName="population">
+        <mat-error *ngIf="city.controls.population.hasError('required')">
+          *Campo obrigatório
+        </mat-error>
+      </mat-form-field>
+      <div *ngIf="i === cities.controls.length - 1" class="material-icons">
+        <button mat-icon-button [disabled]="!city.valid" (click)="addCity()">
+          <mat-icon>add_circle_outline</mat-icon>
+        </button>
+      </div>
+      <div *ngIf="cities.controls.length  > 1 && cities.controls.length - 1 >= i" (click)="removeCity(i)"
+        class="material-icons">
+        <button mat-icon-button>
+          <mat-icon>remove_circle_outline</mat-icon>
+        </button>
+      </div>
+    </ng-container>
+  </div>
+  <div class="ml-auto">
+    <button mat-button class="btn-dbc-secondary" (click)="onCancel()">Cancelar</button>
+    <button mat-raised-button class="btn-dbc-primary" (click)="onConfirm()" [disabled]="!cities.valid">Salvar</button>
+  </div>
+</div>

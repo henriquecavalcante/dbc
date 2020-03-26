@@ -1,0 +1,4 @@
+<div class="container">
+  <app-city-list *ngIf="!showCityForm" (openCityForm)="toggleCityForm($event)" (openDeleteModal)="deleteCity($event)"></app-city-list>
+  <app-city-form *ngIf="showCityForm" (closeCityForm)="toggleCityForm(!$event)"></app-city-form>
+</div>

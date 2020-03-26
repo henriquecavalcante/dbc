@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>{{ title }}</h1>
+<div mat-dialog-content [innerHtml]="body"></div>
+<div mat-dialog-actions class="justify-content-end mt-3">
+  <button mat-button class="btn-dbc-secondary"(click)="onCancel()">
+    Cancelar
+  </button>
+  <button mat-raised-button class="btn-dbc-primary" (click)="onConfirm()">
+    Confirmar
+  </button>
+</div>
