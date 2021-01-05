@@ -24,7 +24,7 @@
     "@angular/platform-browser": "^9.0.7",
     "@angular/platform-browser-dynamic": "^9.0.7",
     "@angular/router": "^9.0.7",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bcrypt": "^3.0.2",
     "body-parser": "^1.18.2",
     "bootstrap": "^4.4.1",
